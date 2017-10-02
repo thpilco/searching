@@ -1,7 +1,7 @@
 var mymap = L.map('map').setView([37.1572788, -3.6020432,15], 15);
 
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-		maxZoom: 15,
+		maxZoom: 20,
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -9,7 +9,7 @@ var mymap = L.map('map').setView([37.1572788, -3.6020432,15], 15);
 	}).addTo(mymap);
 
 	L.marker([37.1572788, -3.6020432,15]).addTo(mymap)
-		.bindPopup("<b> Bar Porras</b><br />37.159101 -3.6020432,15").openPopup();
+		.bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
 
 	L.marker([37.155790, -3.593677]).addTo(mymap)
                 .bindPopup("<b> Cervecería ECU</b><br />37.155790 -3.593677").openPopup();
@@ -30,14 +30,15 @@ var mymap = L.map('map').setView([37.1572788, -3.6020432,15], 15);
                 .bindPopup("<b> Restaurante, Cafetería Almudena</b><br />37.153471 -3.597990").openPopup();
 
 	L.marker([37.153348, -3.597654]).addTo(mymap)
-                .bindPopup("<b> Cervecería Alhambra</b><br />37.153348 -3.597654").openPopup();
+                .bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
 
 
 	L.marker([37.155320, -3.593274]).addTo(mymap)
                 .bindPopup("<b> Restaurante Madraza</b><br />37.155320 -3.593274").openPopup();
 
 
-
+	map.options.macZoom=15;
+	map.options.minZoom=10;
 	var popup = L.popup();
 
 	function onMapClick(e) {

@@ -6,21 +6,31 @@ var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</
 
 var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
     streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
+
+
 // Crea capa openstreetmap
 var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 });
+
+
+
 // Crea capa stamen lite
 var lite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
   attribution: 'Map tiles by <a href="http://stamen.com" target="_blank">Stamen Design</a>, ' +
     '<a href="http://creativecommons.org/licenses/by/3.0" target="_blank">CC BY 3.0</a> &mdash; ' +
     'Map data &copy <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 });
+
+
 // Crea capa imagen de esri
 var esri_img = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
 
+
+
+// 
 var mymap = L.map('map', {
 	center: [37.1572788, -3.6020432,15],
         minZoom: 15,
@@ -47,4 +57,26 @@ L.control.layers(baseLayers, overlays).addTo(mymap);
 
 
 var popup = L.popup();
-L.marker([37.1572788, -3.6020432,15]).bindPopup('This is Littleton, CO.').addTo(Bar)
+
+L.marker([37.1572788, -3.6020432,15]).bindPopup('Bar los Diamantes <p> Tapa: 1,90€').addTo(Bar)
+
+L.marker([37.1572788, -3.6020432,15]).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
+
+L.marker([37.160383, -3.596956]).addTo(mymap).bindPopup("<b> Trending Tapas</b><br />37.160383, -3.596956").openPopup();
+
+L.marker([37.155790, -3.593677]).addTo(mymap).bindPopup("<b> Cervecería ECU</b><br />37.155790 -3.593677").openPopup();
+
+
+L.marker([37.160383, -3.596956]).addTo(mymap).bindPopup("<b> Trending Tapas</b><br />37.160383, -3.596956").openPopup();
+
+L.marker([37.153528, -3.598293]).addTo(mymap).bindPopup("<b> Mar de Tapas</b><br />37.153528 -3.598293").openPopup();
+
+L.marker([37.156673, -3.603373]).addTo(mymap).bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373").openPopup();
+
+L.marker([37.153712, -3.591892]).addTo(mymap).bindPopup("<b> La Cueva 1900</b><br />37.153712 -3.591892").openPopup();
+
+L.marker([37.153471, -3.597990]).addTo(mymap).bindPopup("<b> Restaurante, Cafetería Almudena</b><br />37.153471 -3.597990").openPopup();
+
+L.marker([37.153348, -3.597654]).addTo(mymap).bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
+
+

@@ -32,7 +32,7 @@ var esri_img = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/
 
 // 
 var mymap = L.map('map', {
-	center: [37.1572788, -3.6020432,15],
+	center: [37.1572788, -3.6020432],
         minZoom: 15,
         maxZoom: 18,
 	zoom: 15,
@@ -58,25 +58,35 @@ L.control.layers(baseLayers, overlays).addTo(mymap);
 
 var popup = L.popup();
 
-L.marker([37.1572788, -3.6020432,15]).bindPopup('Bar los Diamantes <p> Tapa: 1,90€').addTo(Bar)
+L.marker([37.157732, -3.599930]).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
 
-L.marker([37.1572788, -3.6020432,15]).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
+L.marker([37.1572788, -3.6020432]).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ").openPopup();
 
-L.marker([37.160383, -3.596956]).addTo(mymap).bindPopup("<b> Trending Tapas</b><br />37.160383, -3.596956").openPopup();
+L.marker([37.160383, -3.596956]).addTo(Bar).bindPopup("<b> Trending Tapas</b><br />").openPopup();
 
-L.marker([37.155790, -3.593677]).addTo(mymap).bindPopup("<b> Cervecería ECU</b><br />37.155790 -3.593677").openPopup();
-
-
-L.marker([37.160383, -3.596956]).addTo(mymap).bindPopup("<b> Trending Tapas</b><br />37.160383, -3.596956").openPopup();
-
-L.marker([37.153528, -3.598293]).addTo(mymap).bindPopup("<b> Mar de Tapas</b><br />37.153528 -3.598293").openPopup();
-
-L.marker([37.156673, -3.603373]).addTo(mymap).bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373").openPopup();
-
-L.marker([37.153712, -3.591892]).addTo(mymap).bindPopup("<b> La Cueva 1900</b><br />37.153712 -3.591892").openPopup();
-
-L.marker([37.153471, -3.597990]).addTo(mymap).bindPopup("<b> Restaurante, Cafetería Almudena</b><br />37.153471 -3.597990").openPopup();
-
-L.marker([37.153348, -3.597654]).addTo(mymap).bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
+L.marker([37.155790, -3.593677]).addTo(Bar).bindPopup("<b> Cervecería ECU</b><br />Precio Tapa: 2,00€ <b> Especialmente recomendado. ").openPopup();
 
 
+L.marker([37.160383, -3.596956]).addTo(Bar).bindPopup("<b> Trending Tapas</b><br /> Precio: 2,00€ <b> Pinchitos, Albondigas").openPopup();
+
+L.marker([37.161539, -3.601490]).addTo(Bar).bindPopup("<b> Cafetería Bar El Rondel <b> Precios económicos</b><br /> ").openPopup();
+
+L.marker([37.156673, -3.603373]).addTo(Bar).bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373").openPopup();
+
+L.marker([37.153712, -3.591892]).addTo(Bar).bindPopup("<b> La Cueva 1900</b><br /> Precio: 2,20€").openPopup();
+
+L.marker([37.153471, -3.597990]).addTo(Bar).bindPopup("<b> Restaurante, Cafetería Almudena</b><br /> Precio: 2,00€").openPopup();
+
+L.marker([37.153348, -3.597654]).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b> <b> Gambas al Pil Pil </b> <br>Precio: 2,10€</b>").openPopup();
+
+L.marker([37.159757, -3.595001]).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
+
+
+
+//var redIcon = new L.Icon({
+//	iconUrl: './img/marker-rojo.png',
+//	iconSize: [25, 41],
+//	iconAnchor: [12, 41],
+//	popupAnchor: [1, -34],
+//	shadowSize: [41, 41]
+//});

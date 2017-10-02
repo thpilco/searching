@@ -91,34 +91,6 @@ var overlays = {
 	"Bar": Bar
 };
 
-L.marker([37.1572788, -3.6020432,15]).addTo(Bar)
-            .bindPopup("<b> Bar Porras</b><br />37.159101 -3.6020432,15").openPopup();
-
-L.marker([37.155790, -3.593677]).addTo(Bar)
-            .bindPopup("<b> Cervecería ECU</b><br />37.155790 -3.593677").openPopup();
-	
-L.marker([37.160383, -3.596956]).addTo(Bar)
-            .bindPopup("<b> Trending Tapas</b><br />37.160383, -3.596956").openPopup();
-
-L.marker([37.153528, -3.598293]).addTo(Bar)
-            .bindPopup("<b> Mar de Tapas</b><br />37.153528 -3.598293").openPopup();
-
-L.marker([37.156673, -3.603373]).addTo(Bar)
-            .bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373").openPopup();
-
-L.marker([37.153712, -3.591892]).addTo(Bar)
-            .bindPopup("<b> La Cueva 1900</b><br />37.153712 -3.591892").openPopup();
-
-L.marker([37.153471, -3.597990]).addTo(Bar)
-            .bindPopup("<b> Restaurante, Cafetería Almudena</b><br />37.153471 -3.597990").openPopup();
-
-L.marker([37.153348, -3.597654]).addTo(Bar)
-            .bindPopup("<b> Cervecería Alhambra</b><br />37.153348 -3.597654").openPopup();
-
-
-L.marker([37.155320, -3.593274]).addTo(Bar)
-            .bindPopup("<b> Restaurante Madraza</b><br />37.155320 -3.593274").openPopup();
-
 L.control.layers(baseLayers, overlays).addTo(mymap);
 
 var popup = L.popup();

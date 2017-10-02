@@ -72,7 +72,7 @@ var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</
     mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
 var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
-	streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
+    streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
 
 var mymap = L.map('map', {
 	center: [37.1572788, -3.6020432,15],
@@ -90,6 +90,8 @@ var baseLayers = {
 var overlays = {
 	"Bar": Bar
 };
+
+mymap.dragging.disable(baseLayers);
 
 L.control.layers(baseLayers, overlays).addTo(mymap);
 

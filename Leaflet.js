@@ -48,7 +48,7 @@ var esri_img = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/
 
 
 
-// 
+//Aquí vamos a crear el mapa. 
 var mymap = L.map('map', {
 	center: [37.1572788, -3.6020432],
         minZoom: 15,
@@ -107,10 +107,25 @@ L.marker([37.159757, -3.595001]).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><b
 
 
 
-//var redIcon = new L.Icon({
-//	iconUrl: './img/marker-rojo.png',
-//	iconSize: [25, 41],
-//	iconAnchor: [12, 41],
-//	popupAnchor: [1, -34],
-//	shadowSize: [41, 41]
+// Aquí creamos las ubicaciones de las paradas de autobus-metro
+L.marker([37.165786, -3.598855]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC</b> ").openPopup();
+L.marker([37.161376, -3.600062]).addTo(mymap).bindPoup ("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3</b> ").openPopup();
+L.marker([37.158866, -3.599823]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3</b> ").openPopup();
+L.marker([37.155251, -3.594497]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2</b> ").openPopup();
+L.marker([37.158403, -3.595267]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> Metropolitano. Plaza Andres Segovia </b> ").openPopup();
+L.marker([37.153677, -3.600856]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 </b> ").openPopup();
+
+
+
+
+
+var redMarker = L.marker.icono({
+
+	icono: 'cafe',
+	markerColor: 'rojo'
+});
+
+L.marker([37.159757, -3.595001],{icono: red-marker}).addTo(Bar); //reference marker
+//L.marker([37.159757, -3.595001],{icon: icon}).addTo(mymap);
+
 //});

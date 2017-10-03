@@ -11,19 +11,3 @@ html, body, #map {
     height: 100%; 
     width: 100vw;
 }
-
-
-L.Icon.Default.prototype.options {
-    iconUrl: './m'
-    width: 500px;
-    background: '#e93434;
-    color: 'red'
-
-}
-
-.map-marker {
-	backgroud: #444;
-	border-radius: 5px;
-}
-
-

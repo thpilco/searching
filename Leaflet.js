@@ -4,7 +4,6 @@ var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</
 		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
     mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
-<<<<<<< HEAD
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 20,
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -13,20 +12,13 @@ var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</
 		id: 'mapbox.streets'
 	}).addTo(mymap);
 
-	L.marker([37.1572788, -3.6020432,15]).addTo(mymap)
-		.bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
-=======
 var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox.light', attribution: mbAttr}),
     streets  = L.tileLayer(mbUrl, {id: 'mapbox.streets',   attribution: mbAttr});
-
->>>>>>> bares
 
 // Crea capa openstreetmap
 var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 });
-
-
 
 // Crea capa stamen lite
 var lite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
@@ -35,17 +27,10 @@ var lite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/
     'Map data &copy <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
 });
 
-
-<<<<<<< HEAD
-	L.marker([37.153348, -3.597654]).addTo(mymap)
-                .bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
-=======
 // Crea capa imagen de esri
 var esri_img = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
   attribution: 'Tiles &copy; &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 });
->>>>>>> bares
-
 
 
 //Aquí vamos a crear el mapa. 
@@ -57,11 +42,6 @@ var mymap = L.map('map', {
         layers: [esri_img , Bar]
 });
 
-<<<<<<< HEAD
-	map.options.macZoom=15;
-	map.options.minZoom=10;
-	var popup = L.popup();
-=======
 var baseLayers = {
     "Satélite": esri_img,
     "Escala de grises": grayscale,
@@ -73,12 +53,17 @@ var baseLayers = {
 var overlays = {
 	"Bar": Bar
 };
->>>>>>> bares
+
 
 mymap.dragging.disable(baseLayers);
 
 L.control.layers(baseLayers, overlays).addTo(mymap);
 
+L.marker([37.1572788, -3.6020432,15]).addTo(mymap)
+		.bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
+
+L.marker([37.153348, -3.597654]).addTo(mymap)
+                .bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
 
 var popup = L.popup();
 
@@ -105,8 +90,6 @@ L.marker([37.153348, -3.597654]).addTo(Bar).bindPopup("<b> Cervecería Alhambra<
 
 L.marker([37.159757, -3.595001]).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
 
-
-
 // Aquí creamos las ubicaciones de las paradas de autobus-metro
 L.marker([37.165786, -3.598855]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC</b> ").openPopup();
 L.marker([37.161376, -3.600062]).addTo(mymap).bindPoup ("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3</b> ").openPopup();
@@ -114,18 +97,3 @@ L.marker([37.158866, -3.599823]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS<
 L.marker([37.155251, -3.594497]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2</b> ").openPopup();
 L.marker([37.158403, -3.595267]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> Metropolitano. Plaza Andres Segovia </b> ").openPopup();
 L.marker([37.153677, -3.600856]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 </b> ").openPopup();
-
-
-
-
-
-var redMarker = L.marker.icono({
-
-	icono: 'cafe',
-	markerColor: 'rojo'
-});
-
-L.marker([37.159757, -3.595001],{icono: red-marker}).addTo(Bar); //reference marker
-//L.marker([37.159757, -3.595001],{icon: icon}).addTo(mymap);
-
-//});

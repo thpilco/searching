@@ -30,7 +30,7 @@ var esri_img = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/
 
 
 
-// 
+//Aquí vamos a crear el mapa. 
 var mymap = L.map('map', {
 	center: [37.1572788, -3.6020432],
         minZoom: 15,
@@ -58,7 +58,10 @@ L.control.layers(baseLayers, overlays).addTo(mymap);
 
 var popup = L.popup();
 
-L.marker([37.157732, -3.599930]).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
+
+
+
+L.marker([37.157732, -3.599930] ).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
 
 L.marker([37.1572788, -3.6020432]).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ").openPopup();
 
@@ -81,7 +84,7 @@ L.marker([37.153348, -3.597654]).addTo(Bar).bindPopup("<b> Cervecería Alhambra<
 
 L.marker([37.159757, -3.595001]).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
 
-
+L.marker([37.161364, -3,601591], {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}) }).addTo(bares);
 
 //var redIcon = new L.Icon({
 //	iconUrl: './img/marker-rojo.png',

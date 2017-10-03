@@ -58,10 +58,7 @@ L.control.layers(baseLayers, overlays).addTo(mymap);
 
 var popup = L.popup();
 
-
-
-
-L.marker([37.157732, -3.599930] ).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
+L.marker([37.157732, -3.599930]).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
 
 L.marker([37.1572788, -3.6020432]).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ").openPopup();
 
@@ -84,12 +81,27 @@ L.marker([37.153348, -3.597654]).addTo(Bar).bindPopup("<b> Cervecería Alhambra<
 
 L.marker([37.159757, -3.595001]).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
 
-L.marker([37.161364, -3,601591], {icon: L.AwesomeMarkers.icon({icon: 'spinner', prefix: 'fa', markerColor: 'red', spin:true}) }).addTo(bares);
 
-//var redIcon = new L.Icon({
-//	iconUrl: './img/marker-rojo.png',
-//	iconSize: [25, 41],
-//	iconAnchor: [12, 41],
-//	popupAnchor: [1, -34],
-//	shadowSize: [41, 41]
+
+// Aquí creamos las ubicaciones de las paradas de autobus-metro
+L.marker([37.165786, -3.598855]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC</b> ").openPopup();
+L.marker([37.161376, -3.600062]).addTo(mymap).bindPoup ("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3</b> ").openPopup();
+L.marker([37.158866, -3.599823]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3</b> ").openPopup();
+L.marker([37.155251, -3.594497]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2</b> ").openPopup();
+L.marker([37.158403, -3.595267]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> Metropolitano. Plaza Andres Segovia </b> ").openPopup();
+L.marker([37.153677, -3.600856]).addTo(mymap).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 </b> ").openPopup();
+
+
+
+
+
+var redMarker = L.marker.icono({
+
+	icono: 'cafe',
+	markerColor: 'rojo'
+});
+
+L.marker([37.159757, -3.595001],{icono: red-marker}).addTo(Bar); //reference marker
+//L.marker([37.159757, -3.595001],{icon: icon}).addTo(mymap);
+
 //});

@@ -1,4 +1,5 @@
 var Bar = L.layerGroup();
+var Buss = L.layerGroup();
 var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -38,13 +39,31 @@ var baseLayers = {
 };
 
 var overlays = {
-	"Bar": Bar
+	"Bar": Bar,
+        "Bus": Buss
 };
 
 mymap.dragging.disable(baseLayers);
 
 L.control.layers(baseLayers, overlays).addTo(mymap);
 
+var LeafIcon = L.Icon.extend({
+		options: {
+			//shadowUrl: 'leaf-shadow.png',
+			iconSize:     [38, 40],
+			shadowSize:   [50, 64],
+			iconAnchor:   [22, 94],
+			shadowAnchor: [4, 62],
+			popupAnchor:  [-3, -76]
+		}
+	});
+        
+var restaurant = new LeafIcon({iconUrl: './img/restaurant.png'}),
+    bus = new LeafIcon({iconUrl: './img/bus.png'});
+    
+L.marker([37.1572788, -3.6000432,15], {icon: restaurant}).bindPopup("Restaurante.").addTo(Bar);
+L.marker([37.1572788, -3.6028000,15], {icon: bus}).bindPopup("Parada de Bus").addTo(Buss);
+
 
 var popup = L.popup();
-L.marker([37.1572788, -3.6020432,15]).bindPopup('This is Littleton, CO.').addTo(Bar)
+//L.marker([37.1572788, -3.6020432,15]).bindPopup('This is Littleton, CO.').addTo(Bar)

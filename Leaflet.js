@@ -27,7 +27,7 @@ var mymap = L.map('map', {
         minZoom: 15,
         maxZoom: 18,
 	zoom: 15,
-        layers: [esri_img , Bar]
+        layers: [esri_img , Bar, Buss]
 });
 
 var baseLayers = {
@@ -60,9 +60,48 @@ var LeafIcon = L.Icon.extend({
         
 var restaurant = new LeafIcon({iconUrl: './img/restaurant.png'}),
     bus = new LeafIcon({iconUrl: './img/bus.png'});
+    lac = new LeafIcon({iconUrl: './img/lac.png'});
+    u3 = new LeafIcon({iconUrl: './img/u3.png'});
     
-L.marker([37.1572788, -3.6000432,15], {icon: restaurant}).bindPopup("Restaurante.").addTo(Bar);
-L.marker([37.1572788, -3.6028000,15], {icon: bus}).bindPopup("Parada de Bus").addTo(Buss);
+//L.marker([37.1572788, -3.6000432,15], {icon: restaurant}).bindPopup("Restaurante.").addTo(Bar);
+//L.marker([37.1572788, -3.6028000,15], {icon: bus}).bindPopup("Parada de Bus").addTo(Buss);
+
+L.marker([37.1572788, -3.6020432,15], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
+
+L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
+
+var popup = L.popup();
+
+L.marker([37.157732, -3.599930], {icon: restaurant}).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
+
+L.marker([37.1572788, -3.6020432], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ").openPopup();
+
+L.marker([37.160383, -3.596956], {icon: restaurant}).addTo(Bar).bindPopup("<b> Trending Tapas</b><br />").openPopup();
+
+L.marker([37.155790, -3.593677], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería ECU</b><br />Precio Tapa: 2,00€ <b> Especialmente recomendado. ").openPopup();
+
+L.marker([37.160383, -3.596956], {icon: restaurant}).addTo(Bar).bindPopup("<b> Trending Tapas</b><br /> Precio: 2,00€ <b> Pinchitos, Albondigas").openPopup();
+
+L.marker([37.161539, -3.601490], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cafetería Bar El Rondel <b> Precios económicos</b><br /> ").openPopup();
+
+L.marker([37.156673, -3.603373], {icon: restaurant}).addTo(Bar).bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373").openPopup();
+
+L.marker([37.153712, -3.591892], {icon: restaurant}).addTo(Bar).bindPopup("<b> La Cueva 1900</b><br /> Precio: 2,20€").openPopup();
+
+L.marker([37.153471, -3.597990], {icon: restaurant}).addTo(Bar).bindPopup("<b> Restaurante, Cafetería Almudena</b><br /> Precio: 2,00€").openPopup();
+
+L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b> <b> Gambas al Pil Pil </b> <br>Precio: 2,10€</b>").openPopup();
+
+L.marker([37.159757, -3.595001], {icon: restaurant}).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
+
+// Aquí creamos las ubicaciones de las paradas de autobus-metro
+L.marker([37.165786, -3.598855], {icon: lac}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC</b> ").openPopup();
+L.marker([37.161376, -3.600062], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3</b> ").openPopup();
+L.marker([37.158866, -3.599823], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3</b> ").openPopup();
+L.marker([37.155251, -3.594497], {icon: bus}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2</b> ").openPopup();
+L.marker([37.158403, -3.595267], {icon: bus}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> Metropolitano. Plaza Andres Segovia </b> ").openPopup();
+L.marker([37.153677, -3.600856], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 </b> ").openPopup();
+
 
 
 var popup = L.popup();

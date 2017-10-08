@@ -40,7 +40,7 @@ var baseLayers = {
 
 var overlays = {
 	"Bar": Bar,
-        "Bus": Buss
+    "Bus": Buss
 };
 
 mymap.dragging.disable(baseLayers);
@@ -59,9 +59,10 @@ var LeafIcon = L.Icon.extend({
 	});
         
 var restaurant = new LeafIcon({iconUrl: './img/restaurant.png'}),
-    bus = new LeafIcon({iconUrl: './img/bus.png'});
-    lac = new LeafIcon({iconUrl: './img/lac.png'});
-    u3 = new LeafIcon({iconUrl: './img/u3.png'});
+    metro = new LeafIcon({iconUrl: './img/metro.jpg'}),
+    sn2 = new LeafIcon({iconUrl: './img/sn2.gif'}),
+    lac = new LeafIcon({iconUrl: './img/lac.gif'}),
+    u3 = new LeafIcon({iconUrl: './img/u3.gif'});
     
 //L.marker([37.1572788, -3.6000432,15], {icon: restaurant}).bindPopup("Restaurante.").addTo(Bar);
 //L.marker([37.1572788, -3.6028000,15], {icon: bus}).bindPopup("Parada de Bus").addTo(Buss);
@@ -70,9 +71,7 @@ L.marker([37.1572788, -3.6020432,15], {icon: restaurant}).addTo(Bar).bindPopup("
 
 L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
 
-var popup = L.popup();
-
-L.marker([37.157732, -3.599930], {icon: restaurant}).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar)
+L.marker([37.157732, -3.599930], {icon: restaurant}).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar);
 
 L.marker([37.1572788, -3.6020432], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ").openPopup();
 
@@ -95,14 +94,13 @@ L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> C
 L.marker([37.159757, -3.595001], {icon: restaurant}).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
 
 // Aquí creamos las ubicaciones de las paradas de autobus-metro
-L.marker([37.165786, -3.598855], {icon: lac}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC</b> ").openPopup();
-L.marker([37.161376, -3.600062], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3</b> ").openPopup();
-L.marker([37.158866, -3.599823], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3</b> ").openPopup();
-L.marker([37.155251, -3.594497], {icon: bus}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2</b> ").openPopup();
-L.marker([37.158403, -3.595267], {icon: bus}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> Metropolitano. Plaza Andres Segovia </b> ").openPopup();
-L.marker([37.153677, -3.600856], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 </b> ").openPopup();
+L.marker([37.165786, -3.598855], {icon: lac}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC").openPopup();
+L.marker([37.161376, -3.600062], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3").openPopup();
+L.marker([37.158866, -3.599823], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3").openPopup();
+L.marker([37.155251, -3.594497], {icon: metro}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2 ").openPopup();
+L.marker([37.158403, -3.595267], {icon: sn2}).addTo(Buss).bindPopup("<b> PARADA DE METRO</b><br /> Plaza Andres Segovia ").openPopup();
+L.marker([37.153677, -3.600856], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 ").openPopup();
 
 
 
-var popup = L.popup();
 //L.marker([37.1572788, -3.6020432,15]).bindPopup('This is Littleton, CO.').addTo(Bar)

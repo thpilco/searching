@@ -67,39 +67,39 @@ var restaurant = new LeafIcon({iconUrl: './img/restaurant.png'}),
 //L.marker([37.1572788, -3.6000432,15], {icon: restaurant}).bindPopup("Restaurante.").addTo(Bar);
 //L.marker([37.1572788, -3.6028000,15], {icon: bus}).bindPopup("Parada de Bus").addTo(Buss);
 
-L.marker([37.1572788, -3.6020432,15], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15").openPopup();
+L.marker([37.1572788, -3.6020432,15], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado. Precio:2,00€ </b><br />37.159101 -3.6020432,15");
 
-L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654").openPopup();
+L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b><b>Gambas al Pil Pil.</b><br />37.153348 -3.597654");
 
-L.marker([37.157732, -3.599930], {icon: restaurant}).bindPopup('Olimpia <p> Tapa: 1,90€').addTo(Bar);
+L.marker([37.157732, -3.599930], {icon: restaurant}).addTo(Bar).bindPopup('Olimpia <p> Tapa: 1,90€');
 
-L.marker([37.1572788, -3.6020432], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ").openPopup();
+L.marker([37.1572788, -3.6020432], {icon: restaurant}).addTo(Bar).bindPopup("<b> Bar Porras </b><b>Fritura de pescado.</b> <b> Precio:2,00€ </b><br /> ");
 
-L.marker([37.160383, -3.596956], {icon: restaurant}).addTo(Bar).bindPopup("<b> Trending Tapas</b><br />").openPopup();
+L.marker([37.160383, -3.596956], {icon: restaurant}).addTo(Bar).bindPopup("<b> Trending Tapas</b><br />");
 
-L.marker([37.155790, -3.593677], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería ECU</b><br />Precio Tapa: 2,00€ <b> Especialmente recomendado. ").openPopup();
+L.marker([37.155790, -3.593677], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería ECU</b><br />Precio Tapa: 2,00€ <b> Especialmente recomendado. ");
 
-L.marker([37.160383, -3.596956], {icon: restaurant}).addTo(Bar).bindPopup("<b> Trending Tapas</b><br /> Precio: 2,00€ <b> Pinchitos, Albondigas").openPopup();
+L.marker([37.160383, -3.596956], {icon: restaurant}).addTo(Bar).bindPopup("<b> Trending Tapas</b><br /> Precio: 2,00€ <b> Pinchitos, Albondigas");
 
-L.marker([37.161539, -3.601490], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cafetería Bar El Rondel <b> Precios económicos</b><br /> ").openPopup();
+L.marker([37.161539, -3.601490], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cafetería Bar El Rondel <b> Precios económicos</b><br /> ");
 
-L.marker([37.156673, -3.603373], {icon: restaurant}).addTo(Bar).bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373").openPopup();
+L.marker([37.156673, -3.603373], {icon: restaurant}).addTo(Bar).bindPopup("<b> Mesón La Loma</b><br />37.156673 -3.603373");
 
-L.marker([37.153712, -3.591892], {icon: restaurant}).addTo(Bar).bindPopup("<b> La Cueva 1900</b><br /> Precio: 2,20€").openPopup();
+L.marker([37.153712, -3.591892], {icon: restaurant}).addTo(Bar).bindPopup("<b> La Cueva 1900</b><br /> Precio: 2,20€");
 
-L.marker([37.153471, -3.597990], {icon: restaurant}).addTo(Bar).bindPopup("<b> Restaurante, Cafetería Almudena</b><br /> Precio: 2,00€").openPopup();
+L.marker([37.153471, -3.597990], {icon: restaurant}).addTo(Bar).bindPopup("<b> Restaurante, Cafetería Almudena</b><br /> Precio: 2,00€");
 
-L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b> <b> Gambas al Pil Pil </b> <br>Precio: 2,10€</b>").openPopup();
+L.marker([37.153348, -3.597654], {icon: restaurant}).addTo(Bar).bindPopup("<b> Cervecería Alhambra</b> <b> Gambas al Pil Pil </b> <br>Precio: 2,10€</b>");
 
-L.marker([37.159757, -3.595001], {icon: restaurant}).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ").openPopup();
+L.marker([37.159757, -3.595001], {icon: restaurant}).addTo(Bar).bindPopup("<b> Gran KiKi Tapas</b><br />Precio Tapa: 2,10€ </b> Papas al ajillo <b> Especialmente recomendado. ");
 
 // Aquí creamos las ubicaciones de las paradas de autobus-metro
-L.marker([37.165786, -3.598855], {icon: lac}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC").openPopup();
-L.marker([37.161376, -3.600062], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3").openPopup();
-L.marker([37.158866, -3.599823], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3").openPopup();
-L.marker([37.155251, -3.594497], {icon: metro}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2 ").openPopup();
-L.marker([37.158403, -3.595267], {icon: sn2}).addTo(Buss).bindPopup("<b> PARADA DE METRO</b><br /> Plaza Andres Segovia ").openPopup();
-L.marker([37.153677, -3.600856], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 ").openPopup();
+L.marker([37.165786, -3.598855], {icon: lac}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> LAC");
+L.marker([37.161376, -3.600062], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - U3");
+L.marker([37.158866, -3.599823], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> 121 - SN4 - U3");
+L.marker([37.155251, -3.594497], {icon: metro}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN2 ");
+L.marker([37.158403, -3.595267], {icon: sn2}).addTo(Buss).bindPopup("<b> PARADA DE METRO</b><br /> Plaza Andres Segovia ");
+L.marker([37.153677, -3.600856], {icon: u3}).addTo(Buss).bindPopup("<b> PARADA DE AÚTOBUS</b><br /> SN4 - U3 ");
 
 
 
